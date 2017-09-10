@@ -2,9 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-/**
- * Created by janinewei on 7/31/17.
- */
+
 public class FirstRatingsTest {
     private FirstRatings fr;
 
@@ -27,4 +25,5 @@ public class FirstRatingsTest {
     public void testLoadRatersTest() {
         fr.testLoadRaters();
     }
+
 }

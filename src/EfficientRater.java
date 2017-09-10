@@ -4,10 +4,10 @@
  * @author Janine Wei
  * @version July, 2017
  */
+import java.util.ArrayList;
+import java.util.HashMap;
 
-import java.util.*;
-
-public class EfficientRater {
+public class EfficientRater implements Rater {
     private String myID;
     private HashMap<String,Rating> myRatings;
 
@@ -50,5 +50,4 @@ public class EfficientRater {
         }
         return list;
     }
-
 }
