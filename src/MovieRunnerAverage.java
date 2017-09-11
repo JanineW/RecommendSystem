@@ -2,11 +2,11 @@ import java.util.*;
 
 public class MovieRunnerAverage {
     public void printAverageRatings() {
-        SecondRatings sr = new SecondRatings("data/ratedmovies_short.csv", "data/ratings_short.csv");
+        SecondRatings sr = new SecondRatings("data/ratedmoviesfull.csv", "data/ratings.csv");
         System.out.println("The number of movies: " + sr.getMovieSize());
         System.out.println("The number of raters: " + sr.getRaterSize());
-//	    System.out.println(sr.getAverageByID("0068646", 4));
-        int minimalRaters = 3;
+//	    System.out.println(sr.getAverageByID("0477348", 4));
+        int minimalRaters = 12;
         ArrayList<Rating> ratings = sr.getAverageRatings(minimalRaters);
         Collections.sort(ratings);
         for(Rating r: ratings) {
@@ -15,8 +15,8 @@ public class MovieRunnerAverage {
     }
 
     public void getAverageRatingOneMovie() {
-        SecondRatings sr = new SecondRatings("data/ratedmovies_short.csv", "data/ratings_short.csv");
-        String movieTitle = "The Godfather";
+        SecondRatings sr = new SecondRatings("data/ratedmoviesfull.csv", "data/ratings.csv");
+        String movieTitle = "Vacation";
         String movieID = sr.getID(movieTitle);
         int minimalRaters = 0;
         ArrayList<Rating> ratings = sr.getAverageRatings(minimalRaters);
